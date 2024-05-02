@@ -126,7 +126,7 @@ function Settings2(props) {
           throw new Error("No branch selected in switch statement");
       }
     },
-    [setOption6, setOption7]
+    [setOption6, setOption7],
   );
 
   const handleCheckboxChange = (name) => (event) => {

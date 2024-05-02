@@ -1,7 +1,14 @@
 import React, { Fragment, useState, useCallback, useRef } from "react";
 import PropTypes from "prop-types";
-import { Popover, IconButton, MenuList, ListItemText, ListItemIcon, MenuItem } from "@mui/material";
-import withStyles from '@mui/styles/withStyles';
+import {
+  Popover,
+  IconButton,
+  MenuList,
+  ListItemText,
+  ListItemIcon,
+  MenuItem,
+} from "@mui/material";
+import withStyles from "@mui/styles/withStyles";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 const styles = {
@@ -32,7 +39,8 @@ function VertOptions(props) {
         style={{ color: color ? color : null }}
         aria-describedby={id}
         aria-label="More Options"
-        size="large">
+        size="large"
+      >
         <MoreVertIcon style={{ color: color ? color : null }} />
       </IconButton>
       <Popover

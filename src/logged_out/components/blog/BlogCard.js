@@ -5,7 +5,7 @@ import format from "date-fns/format";
 import classNames from "classnames";
 import { Typography, Card, Box } from "@mui/material";
 
-import withStyles from '@mui/styles/withStyles';
+import withStyles from "@mui/styles/withStyles";
 
 const styles = (theme) => ({
   img: {

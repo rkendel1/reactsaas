@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ListItemText, Button, Toolbar } from "@mui/material";
 
-import withStyles from '@mui/styles/withStyles';
+import withStyles from "@mui/styles/withStyles";
 
 const styles = {
   toolbar: {
-    justifyContent: "space-between"
-  }
+    justifyContent: "space-between",
+  },
 };
 
 function SubscriptionInfo(props) {
@@ -29,7 +29,7 @@ function SubscriptionInfo(props) {
 
 SubscriptionInfo.propTypes = {
   classes: PropTypes.object.isRequired,
-  openAddBalanceDialog: PropTypes.func.isRequired
+  openAddBalanceDialog: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(SubscriptionInfo);

@@ -1,7 +1,15 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Grid, Typography, Card, Button, Hidden, Box } from "@mui/material";
+import {
+  Grid,
+  Typography,
+  Card,
+  Button,
+  Hidden,
+  Box,
+  CardContent,
+} from "@mui/material";
 import withStyles from "@mui/styles/withStyles";
 import WaveBorder from "../../../shared/components/WaveBorder";
 import ZoomImage from "../../../shared/components/ZoomImage";
@@ -115,8 +123,7 @@ function HeadSection(props) {
                     >
                       <Box mb={4}>
                         <Typography variant={isWidthUpLg ? "h3" : "h4"}>
-                          Free Template for building a SaaS app using
-                          Material-UI
+                          Practice coding interviews at a fraction of the cost.
                         </Typography>
                       </Box>
                       <div>
@@ -125,8 +132,9 @@ function HeadSection(props) {
                             variant={isWidthUpLg ? "h6" : "body1"}
                             color="textSecondary"
                           >
-                            Lorem ipsum dolor sit amet, consetetur sadipscing
-                            elitr, sed diam nonumy eirmod tempor invidunt
+                            Our interviewers are software engineering
+                            professionals with years of experience interviewing
+                            candidates.
                           </Typography>
                         </Box>
                         <Button
@@ -143,13 +151,35 @@ function HeadSection(props) {
                     </Box>
                   </Grid>
                   <Hidden mdDown>
-                    <Grid item md={6}>
-                      <ZoomImage
-                        src={`${process.env.PUBLIC_URL}/images/logged_out/headerImage.jpg`}
-                        className={classes.image}
-                        alt="header example"
-                      />
-                    </Grid>
+                    <Card className={classes.greyBackground}>
+                      <CardContent>
+                        <Typography variant={isWidthUpLg ? "h3" : "h4"}>
+                          Practice coding interviews at a fraction of the cost.
+                        </Typography>
+                        <Box mt={4}>
+                          <Typography
+                            variant={isWidthUpLg ? "h6" : "body1"}
+                            color="textSecondary"
+                          >
+                            Our interviewers are software engineering
+                            professionals with years of experience interviewing
+                            candidates.
+                          </Typography>
+                        </Box>
+                        <Box mt={4}>
+                          <Button
+                            variant="contained"
+                            color="secondary"
+                            fullWidth
+                            className={classes.extraLargeButton}
+                            classes={{ label: classes.extraLargeButtonLabel }}
+                            href="https://github.com/dunky11/react-saas-template"
+                          >
+                            Download from GitHub
+                          </Button>
+                        </Box>
+                      </CardContent>
+                    </Card>
                   </Hidden>
                 </Box>
               </div>

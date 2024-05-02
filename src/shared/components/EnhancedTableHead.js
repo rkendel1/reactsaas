@@ -1,34 +1,41 @@
 import React, { useCallback } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Typography, TableCell, TableHead, TableRow, TableSortLabel, Tooltip } from "@mui/material";
+import {
+  Typography,
+  TableCell,
+  TableHead,
+  TableRow,
+  TableSortLabel,
+  Tooltip,
+} from "@mui/material";
 
-import withStyles from '@mui/styles/withStyles';
+import withStyles from "@mui/styles/withStyles";
 
-const styles = theme => ({
+const styles = (theme) => ({
   tableSortLabel: {
     cursor: "text",
     userSelect: "auto",
-    color: "inherit !important"
+    color: "inherit !important",
   },
   noIcon: {
     "& path": {
-      display: "none !important"
-    }
+      display: "none !important",
+    },
   },
   paddingFix: {
-    paddingLeft: theme.spacing(3)
-  }
+    paddingLeft: theme.spacing(3),
+  },
 });
 
 function EnhancedTableHead(props) {
   const { order, orderBy, rows, onRequestSort, classes } = props;
 
   const createSortHandler = useCallback(
-    property => event => {
+    (property) => (event) => {
       onRequestSort(event, property);
     },
-    [onRequestSort]
+    [onRequestSort],
   );
 
   return (
@@ -77,7 +84,7 @@ EnhancedTableHead.propTypes = {
   onRequestSort: PropTypes.func,
   order: PropTypes.string,
   orderBy: PropTypes.string,
-  rows: PropTypes.arrayOf(PropTypes.object).isRequired
+  rows: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default withStyles(styles, { withTheme: true })(EnhancedTableHead);

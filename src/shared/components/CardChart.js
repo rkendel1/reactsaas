@@ -9,8 +9,16 @@ import {
   YAxis,
 } from "recharts";
 import format from "date-fns/format";
-import { Card, CardContent, Typography, IconButton, Menu, MenuItem, Box } from "@mui/material";
-import withStyles from '@mui/styles/withStyles';
+import {
+  Card,
+  CardContent,
+  Typography,
+  IconButton,
+  Menu,
+  MenuItem,
+  Box,
+} from "@mui/material";
+import withStyles from "@mui/styles/withStyles";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 const styles = (theme) => ({
@@ -45,14 +53,14 @@ function CardChart(props) {
     (event) => {
       setAnchorEl(event.currentTarget);
     },
-    [setAnchorEl]
+    [setAnchorEl],
   );
 
   const formatter = useCallback(
     (value) => {
       return [value, title];
     },
-    [title]
+    [title],
   );
 
   const getSubtitle = useCallback(() => {
@@ -102,7 +110,7 @@ function CardChart(props) {
       setSelectedOption(selectedOption);
       handleClose();
     },
-    [setSelectedOption, handleClose]
+    [setSelectedOption, handleClose],
   );
 
   const isOpen = Boolean(anchorEl);
@@ -122,7 +130,8 @@ function CardChart(props) {
               aria-owns={isOpen ? "long-menu" : undefined}
               aria-haspopup="true"
               onClick={handleClick}
-              size="large">
+              size="large"
+            >
               <MoreVertIcon />
             </IconButton>
             <Menu

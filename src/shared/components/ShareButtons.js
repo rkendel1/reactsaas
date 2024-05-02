@@ -272,7 +272,7 @@ function ShareButtons(props) {
           }
           default: {
             throw new Error(
-              `No branch taken in switch-statement: ${element} is not a valid type.`
+              `No branch taken in switch-statement: ${element} is not a valid type.`,
             );
           }
         }
@@ -285,7 +285,7 @@ ShareButtons.propTypes = {
   types: PropTypes.arrayOf(PropTypes.string).isRequired,
   description: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  forceWhite: PropTypes.bool
+  forceWhite: PropTypes.bool,
 };
 
 export default ShareButtons;

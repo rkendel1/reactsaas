@@ -1,11 +1,6 @@
 import React, { useCallback, useState } from "react";
 import PropTypes from "prop-types";
-import {
-  ListItem,
-  ListItemAvatar,
-  ListItemText,
-  Avatar,
-} from "@mui/material";
+import { ListItem, ListItemAvatar, ListItemText, Avatar } from "@mui/material";
 import ErrorIcon from "@mui/icons-material/Error";
 import formatDistance from "date-fns/formatDistance";
 

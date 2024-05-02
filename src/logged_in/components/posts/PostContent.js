@@ -1,7 +1,16 @@
 import React, { useState, useCallback } from "react";
 import PropTypes from "prop-types";
-import { Grid, TablePagination, Divider, Toolbar, Typography, Button, Paper, Box } from "@mui/material";
-import withStyles from '@mui/styles/withStyles';
+import {
+  Grid,
+  TablePagination,
+  Divider,
+  Toolbar,
+  Typography,
+  Button,
+  Paper,
+  Box,
+} from "@mui/material";
+import withStyles from "@mui/styles/withStyles";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SelfAligningImage from "../../../shared/components/SelfAligningImage";
 import HighlightedInformation from "../../../shared/components/HighlightedInformation";
@@ -18,18 +27,12 @@ const styles = {
 const rowsPerPage = 25;
 
 function PostContent(props) {
-  const {
-    pushMessageToSnackbar,
-    setPosts,
-    posts,
-    openAddPostModal,
-    classes,
-  } = props;
+  const { pushMessageToSnackbar, setPosts, posts, openAddPostModal, classes } =
+    props;
   const [page, setPage] = useState(0);
   const [isDeletePostDialogOpen, setIsDeletePostDialogOpen] = useState(false);
-  const [isDeletePostDialogLoading, setIsDeletePostDialogLoading] = useState(
-    false
-  );
+  const [isDeletePostDialogLoading, setIsDeletePostDialogLoading] =
+    useState(false);
 
   const closeDeletePostDialog = useCallback(() => {
     setIsDeletePostDialogOpen(false);
@@ -64,7 +67,7 @@ function PostContent(props) {
     (__, page) => {
       setPage(page);
     },
-    [setPage]
+    [setPage],
   );
 
   const printImageGrid = useCallback(() => {

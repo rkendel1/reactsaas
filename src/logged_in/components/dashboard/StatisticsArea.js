@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Grid } from "@mui/material";
 
-import withTheme from '@mui/styles/withTheme';
+import withTheme from "@mui/styles/withTheme";
 
 function StatisticsArea(props) {
   const { theme, CardChart, data } = props;
@@ -35,7 +35,7 @@ function StatisticsArea(props) {
 StatisticsArea.propTypes = {
   theme: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
-  CardChart: PropTypes.elementType
+  CardChart: PropTypes.elementType,
 };
 
 export default withTheme(StatisticsArea);

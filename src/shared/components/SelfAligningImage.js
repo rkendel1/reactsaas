@@ -2,7 +2,7 @@ import React, { useState, useRef, useCallback } from "react";
 import PropTypes from "prop-types";
 import format from "date-fns/format";
 import { ImageListItemBar } from "@mui/material";
-import withStyles from '@mui/styles/withStyles';
+import withStyles from "@mui/styles/withStyles";
 import VertOptions from "./VertOptions";
 
 const styles = {
@@ -23,15 +23,8 @@ const styles = {
 };
 
 function SelfAligningImage(props) {
-  const {
-    classes,
-    src,
-    title,
-    timeStamp,
-    options,
-    roundedBorder,
-    theme,
-  } = props;
+  const { classes, src, title, timeStamp, options, roundedBorder, theme } =
+    props;
   const img = useRef();
   const [hasMoreWidthThanHeight, setHasMoreWidthThanHeight] = useState(null);
   const [hasLoaded, setHasLoaded] = useState(false);

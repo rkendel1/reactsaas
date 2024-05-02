@@ -51,7 +51,7 @@ function getVerticalBlogPosts(isWidthUpSm, isWidthUpMd, blogPosts) {
             url={blogPost.url}
           />
         </Box>
-      </Grid>
+      </Grid>,
     );
   });
   return gridRows.map((element, index) => (

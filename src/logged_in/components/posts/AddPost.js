@@ -24,7 +24,7 @@ function AddPost(props) {
     (file) => {
       setFiles([file]);
     },
-    [setFiles]
+    [setFiles],
   );
 
   const onDrop = useCallback(
@@ -46,7 +46,7 @@ function AddPost(props) {
         setCropperFile(file);
       }
     },
-    [pushMessageToSnackbar, setCropperFile]
+    [pushMessageToSnackbar, setCropperFile],
   );
 
   const onCropperClose = useCallback(() => {
@@ -65,7 +65,7 @@ function AddPost(props) {
       acceptDrop(file);
       setCropperFile(null);
     },
-    [acceptDrop, cropperFile, setCropperFile]
+    [acceptDrop, cropperFile, setCropperFile],
   );
 
   const handleUpload = useCallback(() => {

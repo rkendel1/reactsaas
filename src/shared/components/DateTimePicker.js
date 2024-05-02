@@ -39,7 +39,7 @@ const Theme2 = (theme) =>
           },
         },
       },
-    })
+    }),
   );
 
 function DTPicker(props) {

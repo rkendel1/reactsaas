@@ -2,8 +2,14 @@ import React, { useState, useCallback, useRef, Fragment } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { withRouter } from "react-router-dom";
-import { TextField, Button, Checkbox, Typography, FormControlLabel } from "@mui/material";
-import withStyles from '@mui/styles/withStyles';
+import {
+  TextField,
+  Button,
+  Checkbox,
+  Typography,
+  FormControlLabel,
+} from "@mui/material";
+import withStyles from "@mui/styles/withStyles";
 import FormDialog from "../../../shared/components/FormDialog";
 import HighlightedInformation from "../../../shared/components/HighlightedInformation";
 import ButtonCircularProgress from "../../../shared/components/ButtonCircularProgress";
@@ -164,7 +170,7 @@ function LoginDialog(props) {
               align="center"
               className={classNames(
                 classes.forgotPassword,
-                isLoading ? classes.disabledText : null
+                isLoading ? classes.disabledText : null,
               )}
               color="primary"
               onClick={isLoading ? null : openChangePasswordDialog}

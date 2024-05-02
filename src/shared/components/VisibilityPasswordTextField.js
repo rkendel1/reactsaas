@@ -20,7 +20,8 @@ function VisibilityPasswordTextField(props) {
               onMouseDown={(event) => {
                 event.preventDefault();
               }}
-              size="large">
+              size="large"
+            >
               {isVisible ? <VisibilityIcon /> : <VisibilityOffIcon />}
             </IconButton>
           </InputAdornment>

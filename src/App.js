@@ -1,5 +1,9 @@
 import React, { Fragment, Suspense, lazy } from "react";
-import { ThemeProvider, StyledEngineProvider, CssBaseline } from "@mui/material";
+import {
+  ThemeProvider,
+  StyledEngineProvider,
+  CssBaseline,
+} from "@mui/material";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import theme from "./theme";
 import GlobalStyles from "./GlobalStyles";

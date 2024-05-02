@@ -1,7 +1,7 @@
 import React, { memo, useCallback, useState, useEffect, Fragment } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import withStyles from '@mui/styles/withStyles';
+import withStyles from "@mui/styles/withStyles";
 import Routing from "./Routing";
 import NavBar from "./navigation/NavBar";
 import ConsecutiveSnackbarMessages from "../../shared/components/ConsecutiveSnackbarMessages";
@@ -16,7 +16,7 @@ const styles = (theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down("sm")]: {
       marginLeft: 0,
     },
   },
@@ -41,9 +41,8 @@ function Main(props) {
   const [Dropzone, setDropzone] = useState(null);
   const [hasFetchedDropzone, setHasFetchedDropzone] = useState(false);
   const [DateTimePicker, setDateTimePicker] = useState(null);
-  const [hasFetchedDateTimePicker, setHasFetchedDateTimePicker] = useState(
-    false
-  );
+  const [hasFetchedDateTimePicker, setHasFetchedDateTimePicker] =
+    useState(false);
   const [transactions, setTransactions] = useState([]);
   const [statistics, setStatistics] = useState({ views: [], profit: [] });
   const [posts, setPosts] = useState([]);
@@ -147,7 +146,7 @@ function Main(props) {
       },
     ];
     let curUnix = Math.round(
-      new Date().getTime() / 1000 - iterations * oneMonthSeconds
+      new Date().getTime() / 1000 - iterations * oneMonthSeconds,
     );
     for (let i = 0; i < iterations; i += 1) {
       const randomTransactionTemplate =
@@ -174,7 +173,7 @@ function Main(props) {
     const iterations = persons.length;
     const oneDaySeconds = 60 * 60 * 24;
     let curUnix = Math.round(
-      new Date().getTime() / 1000 - iterations * oneDaySeconds
+      new Date().getTime() / 1000 - iterations * oneDaySeconds,
     );
     for (let i = 0; i < iterations; i += 1) {
       const person = persons[i];
@@ -197,7 +196,7 @@ function Main(props) {
     const iterations = persons.length;
     const oneDaySeconds = 60 * 60 * 24;
     let curUnix = Math.round(
-      new Date().getTime() / 1000 - iterations * oneDaySeconds
+      new Date().getTime() / 1000 - iterations * oneDaySeconds,
     );
     for (let i = 0; i < iterations; i += 1) {
       const person = persons[i];
@@ -300,7 +299,7 @@ function Main(props) {
     (pushMessage) => {
       setPushMessageToSnackbar(() => pushMessage);
     },
-    [setPushMessageToSnackbar]
+    [setPushMessageToSnackbar],
   );
 
   useEffect(() => {

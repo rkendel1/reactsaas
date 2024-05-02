@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import format from "date-fns/format";
 import { Grid, Typography, Card, Box } from "@mui/material";
-import withStyles from '@mui/styles/withStyles';
+import withStyles from "@mui/styles/withStyles";
 import BlogCard from "./BlogCard";
 import ShareButton from "../../../shared/components/ShareButton";
 import ZoomImage from "../../../shared/components/ZoomImage";
@@ -80,7 +80,7 @@ function BlogPost(props) {
                             }}
                           />
                         </Grid>
-                      )
+                      ),
                     )}
                   </Grid>
                 </Box>

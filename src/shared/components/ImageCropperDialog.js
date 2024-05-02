@@ -1,8 +1,14 @@
 import React, { useState, useCallback } from "react";
 import PropTypes from "prop-types";
-import { Dialog, DialogContent, DialogActions, Button, Box } from "@mui/material";
+import {
+  Dialog,
+  DialogContent,
+  DialogActions,
+  Button,
+  Box,
+} from "@mui/material";
 
-import withStyles from '@mui/styles/withStyles';
+import withStyles from "@mui/styles/withStyles";
 
 const styles = (theme) => ({
   dialogPaper: { maxWidth: `${theme.breakpoints.values.md}px !important` },
@@ -30,7 +36,7 @@ function ImageCropperDialog(props) {
     (cropFunction) => {
       setCrop(() => cropFunction);
     },
-    [setCrop]
+    [setCrop],
   );
 
   return (

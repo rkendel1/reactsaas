@@ -11,7 +11,7 @@ import {
   Typography,
   Box,
 } from "@mui/material";
-import withStyles from '@mui/styles/withStyles';
+import withStyles from "@mui/styles/withStyles";
 import MessageIcon from "@mui/icons-material/Message";
 import MessageListItem from "./MessageListItem";
 
@@ -25,7 +25,7 @@ const styles = (theme) => ({
     maxWidth: 350,
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(1),
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down("md")]: {
       maxWidth: 270,
     },
   },
@@ -59,7 +59,8 @@ function MessagePopperButton(props) {
         aria-label="Open Messages"
         aria-describedby={id}
         color="primary"
-        size="large">
+        size="large"
+      >
         <MessageIcon />
       </IconButton>
       <Popover

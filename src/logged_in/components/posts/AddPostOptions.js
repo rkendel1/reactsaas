@@ -13,7 +13,7 @@ import {
   MenuItem,
   Box,
 } from "@mui/material";
-import withStyles from '@mui/styles/withStyles';
+import withStyles from "@mui/styles/withStyles";
 import CloseIcon from "@mui/icons-material/Close";
 import Bordered from "../../../shared/components/Bordered";
 import ImageCropperDialog from "../../../shared/components/ImageCropperDialog";
@@ -117,7 +117,7 @@ function AddPostOptions(props) {
           throw new Error("No branch selected in switch-statement.");
       }
     },
-    [setOption1, setOption2, setOption3, setOption4]
+    [setOption1, setOption2, setOption3, setOption4],
   );
 
   const printFile = useCallback(() => {
@@ -147,29 +147,28 @@ function AddPostOptions(props) {
     );
   }, [onDrop, files, classes, deleteItem]);
 
-  const inputs = 
-    [
-      {
-        state: option1,
-        label: "Option 1",
-        stateName: "option1",
-      },
-      {
-        state: option2,
-        label: "Option 2",
-        stateName: "option2",
-      },
-      {
-        state: option3,
-        label: "Option 3",
-        stateName: "option3",
-      },
-      {
-        state: option4,
-        label: "Option 4",
-        stateName: "option4",
-      },
-    ];
+  const inputs = [
+    {
+      state: option1,
+      label: "Option 1",
+      stateName: "option1",
+    },
+    {
+      state: option2,
+      label: "Option 2",
+      stateName: "option2",
+    },
+    {
+      state: option3,
+      label: "Option 3",
+      stateName: "option3",
+    },
+    {
+      state: option4,
+      label: "Option 4",
+      stateName: "option4",
+    },
+  ];
 
   return (
     <Fragment>

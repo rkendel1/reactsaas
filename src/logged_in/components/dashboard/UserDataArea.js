@@ -13,7 +13,7 @@ import {
   AccordionSummary,
   Typography,
 } from "@mui/material";
-import withStyles from '@mui/styles/withStyles';
+import withStyles from "@mui/styles/withStyles";
 import PlayCirlceOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import PauseCircleOutlineIcon from "@mui/icons-material/PauseCircleOutline";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -88,9 +88,8 @@ function CustomTable(props) {
   const [order, setOrder] = useState("asc");
   const [orderBy, setOrderBy] = useState(null);
   const [page, setPage] = useState(0);
-  const [isDeleteTargetDialogOpen, setIsDeleteTargetDialogOpen] = useState(
-    false
-  );
+  const [isDeleteTargetDialogOpen, setIsDeleteTargetDialogOpen] =
+    useState(false);
   const [deleteTargetDialogRow, setDeleteTargetDialogRow] = useState(null);
   const [isDeleteTargetLoading, setIsDeleteTargetLoading] = useState(false);
 
@@ -104,7 +103,7 @@ function CustomTable(props) {
       setOrder(_order);
       setOrderBy(_orderBy);
     },
-    [setOrder, setOrderBy, order, orderBy]
+    [setOrder, setOrderBy, order, orderBy],
   );
 
   const deleteTarget = useCallback(() => {
@@ -114,7 +113,7 @@ function CustomTable(props) {
       setIsDeleteTargetLoading(false);
       const _targets = [...targets];
       const index = _targets.findIndex(
-        (element) => element.id === deleteTargetDialogRow.id
+        (element) => element.id === deleteTargetDialogRow.id,
       );
       _targets.splice(index, 1);
       setTargets(_targets);
@@ -135,7 +134,7 @@ function CustomTable(props) {
     (_, page) => {
       setPage(page);
     },
-    [setPage]
+    [setPage],
   );
 
   const handleDeleteTargetDialogClose = useCallback(() => {
@@ -147,7 +146,7 @@ function CustomTable(props) {
       setIsDeleteTargetDialogOpen(true);
       setDeleteTargetDialogRow(row);
     },
-    [setIsDeleteTargetDialogOpen, setDeleteTargetDialogRow]
+    [setIsDeleteTargetDialogOpen, setDeleteTargetDialogRow],
   );
 
   const toggleTarget = useCallback(
@@ -167,7 +166,7 @@ function CustomTable(props) {
       }
       setTargets(_targets);
     },
-    [pushMessageToSnackbar, targets, setTargets]
+    [pushMessageToSnackbar, targets, setTargets],
   );
 
   return (
@@ -241,7 +240,8 @@ function CustomTable(props) {
                                 toggleTarget(row);
                               }}
                               aria-label="Pause"
-                              size="large">
+                              size="large"
+                            >
                               <PauseCircleOutlineIcon
                                 className={classes.blackIcon}
                               />
@@ -254,7 +254,8 @@ function CustomTable(props) {
                                 toggleTarget(row);
                               }}
                               aria-label="Resume"
-                              size="large">
+                              size="large"
+                            >
                               <PlayCirlceOutlineIcon />
                             </IconButton>
                           )}
@@ -264,7 +265,8 @@ function CustomTable(props) {
                               handleDeleteTargetDialogOpen(row);
                             }}
                             aria-label="Delete"
-                            size="large">
+                            size="large"
+                          >
                             <DeleteIcon className={classes.blackIcon} />
                           </IconButton>
                         </Box>

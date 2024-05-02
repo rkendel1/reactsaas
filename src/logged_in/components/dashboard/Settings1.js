@@ -88,7 +88,7 @@ function Settings1(props) {
           throw new Error("No branch selected in switch statement.");
       }
     },
-    [setOption1, setOption2, setOption3, setOption4, setOption5, setOption6]
+    [setOption1, setOption2, setOption3, setOption4, setOption5, setOption6],
   );
 
   const resetState = useCallback(() => {

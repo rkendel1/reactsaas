@@ -22,7 +22,7 @@ function Routing(props) {
           date={post.date}
           content={post.content}
           otherArticles={blogPosts.filter(
-            (blogPost) => blogPost.id !== post.id
+            (blogPost) => blogPost.id !== post.id,
           )}
         />
       ))}
