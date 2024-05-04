@@ -150,37 +150,6 @@ function HeadSection(props) {
                       </div>
                     </Box>
                   </Grid>
-                  <Hidden mdDown>
-                    <Card className={classes.greyBackground}>
-                      <CardContent>
-                        <Typography variant={isWidthUpLg ? "h3" : "h4"}>
-                          Practice coding interviews at a fraction of the cost.
-                        </Typography>
-                        <Box mt={4}>
-                          <Typography
-                            variant={isWidthUpLg ? "h6" : "body1"}
-                            color="textSecondary"
-                          >
-                            Our interviewers are software engineering
-                            professionals with years of experience interviewing
-                            candidates.
-                          </Typography>
-                        </Box>
-                        <Box mt={4}>
-                          <Button
-                            variant="contained"
-                            color="secondary"
-                            fullWidth
-                            className={classes.extraLargeButton}
-                            classes={{ label: classes.extraLargeButtonLabel }}
-                            href="https://github.com/dunky11/react-saas-template"
-                          >
-                            Download from GitHub
-                          </Button>
-                        </Box>
-                      </CardContent>
-                    </Card>
-                  </Hidden>
                 </Box>
               </div>
             </Card>
