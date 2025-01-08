@@ -80,7 +80,7 @@ const infos = [
   },
   {
     icon: <MailIcon />,
-    description: "support@company.com",
+    description: "info@populst.com",
   },
 ];
 
